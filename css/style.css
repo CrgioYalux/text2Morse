@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* title start */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1.2em;
+  user-select: none;
+}
+.titlePt1 {
+  font-family: "Roboto", sans-serif;
+  display: inline;
+}
+.titlePt2 {
+  font-family: "Sansita Swashed", cursive;
+  display: inline;
+  color: rgb(0, 68, 255);
+}
+/* title end */
+
+/* input start */
+.input {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid black;
+
+  text-align: center;
+  font-size: 20px;
+}
+/* input end */
+
+/* morse start */
+.morse {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  height: 50%;
+  border: 1px solid #000;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  padding: 5px;
+
+  overflow-y: auto;
+}
+/* morse end */
