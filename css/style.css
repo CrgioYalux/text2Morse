@@ -9,9 +9,10 @@ body {
 /* title start */
 .title {
   position: absolute;
+  top: 5px;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 1.2em;
+  font-size: 1.5em;
   user-select: none;
 }
 .titlePt1 {
@@ -55,5 +56,66 @@ body {
   padding: 5px;
 
   overflow-y: auto;
+  overflow-x: hidden;
+
+  border-radius: 10px;
+
+  /* z-index: 1; */
 }
 /* morse end */
+
+.dot {
+  width: 15px;
+  height: 15px;
+
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dash {
+  position: relative;
+  bottom: 5px;
+
+  height: 10px;
+  width: 25px;
+
+  margin: 0px 2px 0px 2px;
+
+  background-color: black;
+  display: inline-block;
+
+  /* space between symbols of a word */
+}
+.btChars {
+  width: 15px;
+  display: inline-block;
+}
+.btSwitch {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+
+  width: 4em;
+  height: 50px;
+
+  transform: translate(-50%, -55%);
+
+  background-color: black;
+
+  display: flex;
+
+  align-items: center;
+  cursor: pointer;
+
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+.btSwitchInt {
+  position: absolute;
+
+  left: 5px;
+
+  width: 30%;
+  height: 80%;
+
+  background-color: white;
+}
