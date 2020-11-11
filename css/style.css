@@ -90,15 +90,41 @@ body {
   width: 15px;
   display: inline-block;
 }
-.btSwitch {
+
+.block {
+  position: absolute;
+  width: 5em;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.7;
+  z-index: -1;
+
+  bottom: -4px;
+  left: -7px;
+
+  border-radius: 5px;
+}
+
+.buttonsCont {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 2em;
+
   position: absolute;
   top: 75%;
   left: 50%;
+  transform: translate(-50%, -55%);
+}
+.btSwitch,
+.btSwitch2 {
+  position: relative;
+  /* top: 75%;
+  left: 50%; */
 
   width: 4em;
   height: 50px;
 
-  transform: translate(-50%, -55%);
+  /* transform: translate(-50%, -55%); */
 
   background-color: black;
 
@@ -109,7 +135,12 @@ body {
 
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
-.btSwitchInt {
+.btSwitch2 {
+  transform: rotate(180deg);
+}
+
+.btSwitchInt,
+.btSwitchInt2 {
   position: absolute;
 
   left: 5px;

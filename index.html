@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>text2Morse</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
-        <div class="title"><h2 class="titlePt1">text2</h2><h1 class="titlePt2">Morse</h1></div>
-        <div class="morse" id="morse"></div>
-        <div class="btSwitch" id="btSwitch"><div class="btSwitchInt" id="btSwitchInt"></div></div>
+    <body onload="init()">
+        <div class="title"><h2 class="titlePt1" id="titlePt1">text2</h2><h1 class="titlePt2" id="titlePt2">Morse</h1></div>
+        <div class="morse" id="output"></div>
+        <div class="buttonsCont">
+            <div class="btSwitch" id="btSwitch" onclick="applyCss('btSwitch','btSwitchInt')">
+                <div class="btSwitchInt" id="btSwitchInt" ></div>
+            </div>
+            <div class="block" id="block"></div>
+            <div class="btSwitch2" id="btSwitch2" onclick="applyCss('btSwitch2','btSwitchInt2')">
+                <div class="btSwitchInt2" id="btSwitchInt2" ></div>
+            </div>
+        </div>
         <input type="text" class="input" id="input">
-    <script src="js/script.js"></script>
+    <script src="js/script_Morse.js"></script>
     <script src="js/switchBt.js"></script>
     </body>
 </html>
