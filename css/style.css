@@ -91,21 +91,7 @@ body {
   display: inline-block;
 }
 
-.block {
-  position: absolute;
-  width: 5em;
-  height: 60px;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.7;
-  z-index: -1;
-
-  bottom: -4px;
-  left: -7px;
-
-  border-radius: 5px;
-}
-
-.buttonsCont {
+.buttonsCont1 {
   display: inline-grid;
   grid-template-columns: auto auto;
   column-gap: 2em;
@@ -115,16 +101,12 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
 }
+
 .btSwitch,
 .btSwitch2 {
   position: relative;
-  /* top: 75%;
-  left: 50%; */
-
   width: 4em;
-  height: 50px;
-
-  /* transform: translate(-50%, -55%); */
+  height: 40px;
 
   background-color: black;
 
@@ -149,4 +131,63 @@ body {
   height: 80%;
 
   background-color: white;
+}
+
+.buttonsCont2 {
+  display: none;
+  /* display: inline-grid; */
+  grid-template-columns: auto auto auto auto;
+  column-gap: 1em;
+
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  user-select: none;
+}
+.buttonsCont2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+
+  cursor: pointer;
+}
+.btDot {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.btDash {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.btSpace {
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.btSpace > div {
+  position: absolute;
+  top: 5px;
+}
+.btDash > div {
+  position: relative;
+  top: 1px;
+}
+.btDel {
+  border: none !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #000;
 }

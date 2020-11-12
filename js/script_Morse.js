@@ -81,10 +81,43 @@ const returnMorse = (state) => {
     return state;
 }
 
+// events
 document.getElementById("input").addEventListener("keyup",()=>{
   returnMorse(stateMorseDisplaying);
 })
 document.getElementById("input").addEventListener("keyup",()=>{
+  returnText(stateSwitchToText);
+})
+
+document.getElementById("btDot").addEventListener("click",()=>{
+  document.getElementById("input").value += ".";
+  returnText(stateSwitchToText);
+})
+document.getElementById("btDash").addEventListener("click",()=>{
+  document.getElementById("input").value += "-";
+  returnText(stateSwitchToText);
+})
+document.getElementById("btSpace").addEventListener("click",()=>{
+  document.getElementById("input").value += " ";
+  returnText(stateSwitchToText);
+})
+document.getElementById("btDel").addEventListener("click",()=>{
+  let text = document.getElementById("input").value;
+  let textSplitted = text.split(' ');
+  let lastWord = textSplitted[textSplitted.length-1];
+
+  if(lastWord == ""){
+    textSplitted.pop();    
+  }
+  else{
+    let lastWordSplitted = lastWord.split('');
+    lastWordSplitted.pop();
+    let newLastWord = lastWordSplitted.join('');
+    textSplitted[textSplitted.length-1] = newLastWord;
+  }
+  let newText = textSplitted.join(' ');
+  document.getElementById("input").value = newText;
+  
   returnText(stateSwitchToText);
 })
 
@@ -124,7 +157,7 @@ const drawMorse = (string,where) => {
 
 const morse2Text = (code,morse) => {
   const splitted = code.split(' ');
-  console.log(splitted);
+  // console.log(splitted);
   const codeSize = splitted.length;
   let text = "";
 
