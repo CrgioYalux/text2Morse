@@ -38,17 +38,30 @@ const cssStyle = (state, idBtExt, idBtInt) => {
     }
 }
 
-const blockBT = (state) => {
-    let block = document.getElementById("block");
-    if(state){
-        block.style.backgroundColor = "#FF0000";
-        block.style.zIndex = 1;
+const hideButton = (state) => {
+    let button = document.getElementById("btSwitch");
+    let cont = document.getElementById("buttonsCont1");
+    
+    if(state){    
+        button.style.display = "none";
+        cont.style.columnGap = "0em";        
     }
     else{
-        block.style.backgroundColor = "#FFFFFF";
-        block.style.zIndex = -1;
+        button.style.display = "flex";
+        cont.style.columnGap = "2em";
     }
 }
+
+const showBtCont = (state) => {
+    let buttonsCont2 = document.getElementById("buttonsCont2");
+    if(state){
+        buttonsCont2.style.display = "inline-grid";
+    }
+    else{
+        buttonsCont2.style.display = "none";
+    }
+}
+
 const changeTitle = (state) => {
     let titlePt1 = document.getElementById("titlePt1");
     let titlePt2 = document.getElementById("titlePt2");
@@ -72,17 +85,10 @@ const applyCss = (idBtExt, idBtInt) => {
     }
     else{
         state = state2;
-        blockBT(state);
+        hideButton(state);
         changeTitle(state);
+        showBtCont(state);
         cssStyle(state,idBtExt,idBtInt);
         state2 = !state2;
     }
-    console.log(state);
 }
-
-// btSwitch.addEventListener("click",()=>{
-//     init = applyCss(init);
-//     // console.log(init);
-// })
-
-
