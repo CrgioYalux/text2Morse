@@ -10,10 +10,12 @@
 }
 
 :root {
+	/* some robbed colors from tailwind */
 	font-size: 62.5%;
-	--gray-800: #1f2937;
+	--gray-200: #e5e7eb;
 	--gray-400: #9ca3af;
 	--gray-600: #4b5563;
+	--gray-800: #1f2937;
 	--yellow-400: #fbbf24;
 	--blue-600: #2563eb;
 }
@@ -26,6 +28,8 @@ body {
 	justify-content: space-between;
 }
 
+/* css for title starts */
+
 header {
 	user-select: none;
 	display: flex;
@@ -34,6 +38,7 @@ header {
 	justify-content: center;
 	font-size: 2.2rem;
 	gap: 4px;
+	flex: 0 0 auto;
 }
 .titlePt1 {
 	font-family: 'Roboto', sans-serif;
@@ -53,4 +58,50 @@ header > i {
 	bottom: 5px;
 	font-family: 'Sansita Swashed', cursive;
 	color: var(--blue-600);
+}
+
+/* css for title ends */
+
+/* css for input container starts */
+
+main {
+	flex: 1 1 auto;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	font-size: 2rem;
+}
+
+@media (min-width: 640px) {
+	main {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.inputContainer {
+	background-color: var(--gray-200);
+	font-size: 1.2em;
+	color: var(--gray-800);
+	font-weight: bold;
+	padding: 0.4em;
+	outline: none;
+	border: none;
+	resize: none;
+	font-family: monospace;
+}
+
+.inputContainer::selection {
+	background: var(--gray-800);
+	color: var(--gray-200);
+}
+
+.outputContainer {
+	border: none;
+	background-color: black;
+	font-family: monospace;
+}
+
+.outputContainer::selection {
+	background: var(--gray-200);
+	color: var(--gray-800);
 }
