@@ -18,6 +18,8 @@
 	--gray-800: #1f2937;
 	--yellow-400: #fbbf24;
 	--blue-600: #2563eb;
+	--ind-600: #4f46e5;
+	--green-600: #34d399;
 }
 
 body {
@@ -84,10 +86,14 @@ main {
 	padding: 0.4em;
 	font-size: 1.2em;
 	font-weight: bold;
-	outline: none;
 	border: none;
 	resize: none;
 	font-family: monospace;
+	caret-color: var(--green-600);
+}
+
+.inputContainer:focus {
+	outline: 2px solid var(--green-600);
 }
 
 .inputContainer::selection {
