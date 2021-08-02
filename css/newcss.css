@@ -80,10 +80,10 @@ main {
 
 .inputContainer {
 	background-color: var(--gray-200);
-	font-size: 1.2em;
 	color: var(--gray-800);
-	font-weight: bold;
 	padding: 0.4em;
+	font-size: 1.2em;
+	font-weight: bold;
 	outline: none;
 	border: none;
 	resize: none;
@@ -96,8 +96,12 @@ main {
 }
 
 .outputContainer {
+	background-color: var(--gray-800);
+	color: var(--gray-200);
+	padding: 0.4em;
+	font-size: 1.2em;
+	font-weight: bold;
 	border: none;
-	background-color: black;
 	font-family: monospace;
 }
 
