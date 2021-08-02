@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+	--gray-800: #1f2937;
+	--gray-400: #9ca3af;
+	--gray-600: #4b5563;
+	--yellow-400: #fbbf24;
+	--blue-600: #2563eb;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header {
+	user-select: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.2rem;
+	gap: 4px;
+}
+.titlePt1 {
+	font-family: 'Roboto', sans-serif;
+	color: var(--gray-800);
+	font-size: 2em;
+}
+header > i {
+	font-size: 1.6em;
+	color: var(--gray-800);
+	background-color: var(--gray-400);
+	border-radius: 50%;
+	text-shadow: 0 5px 0 var(--gray-400);
+}
+.titlePt2 {
+	position: relative;
+	font-size: 2.4em;
+	bottom: 5px;
+	font-family: 'Sansita Swashed', cursive;
+	color: var(--blue-600);
+}
