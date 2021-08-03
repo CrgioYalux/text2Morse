@@ -82,7 +82,7 @@ main {
 	}
 }
 
-.inputContainer {
+.TextContainer {
 	background-color: var(--gray-200);
 	color: var(--gray-800);
 	padding: 0.4em;
@@ -95,16 +95,16 @@ main {
 	caret-color: var(--green-600);
 }
 
-.inputContainer:focus {
+.TextContainer:focus {
 	border-top: 2px solid var(--green-600);
 }
 
-.inputContainer::selection {
+.TextContainer::selection {
 	background: var(--gray-800);
 	color: var(--gray-200);
 }
 
-.outputContainer {
+.MorseContainer {
 	background-color: var(--gray-800);
 	color: var(--gray-200);
 	padding: 0.4em;
@@ -117,11 +117,11 @@ main {
 	caret-color: var(--blue-600);
 }
 
-.outputContainer:focus {
+.MorseContainer:focus {
 	border-top: 2px solid var(--blue-600);
 }
 
-.outputContainer::selection {
+.MorseContainer::selection {
 	background: var(--gray-200);
 	color: var(--gray-800);
 }
